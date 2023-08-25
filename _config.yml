@@ -1,51 +1,118 @@
-# site settings
+# Site settings
+title: ivo Blog
+SEOTitle: 老王的自留地 | ivo Blog
+header-img: "img/tag.jpg"
+email: wxtbeyond@gmail.com
+description: 这里是老王的自留地，一切都是老王和媳妇老张说了算，爱写啥写啥，也不打算开放评论，就这样吧。 #"Every failure is leading towards success."
+keyword: "ivo, ivo Blog, linux, network, IVO, 老王, 网络, 技巧"
+url: "http://ivo-wang.github.io"          # your host, for absolute URL
+baseurl: ""      # for example, '/blog' if your blog hosted on 'host/blog'
+github_repo: "https://github.com/ivo-wang/ivo-wang.github.io.git" # you code repository
 
-title: 于大明白
-description: Jekyll theme for a beautiful online CV
-taglong: Jekyll theme for a beautiful online CV
-tagshort: Jekyll theme
-url: https://cvless.netlify.app
-baseurl: ""
+# Sidebar settings
+sidebar: true                           # whether or not using Sidebar.
+sidebar-about-description: "写写字为了不忘记!"
+sidebar-avatar: /img/lookup.jpg      # use absolute URL, seeing it's used in both `/` and `/about/`
+
+
+
+# SNS settings
+RSS: true
+# weibo_username:     qiubaiying
+zhihu_username:     xiceman
+github_username:    ivo-wang
+#facebook_username:  baiying.qiu.7
+#jianshu_username:   e71990ada2fd
+twitter_username:   IvoWang
+
+
+
+
+# Build settings
+# from 2016, 'pygments' is unsupported on GitHub Pages. Use 'rouge' for highlighting instead.
 permalink: pretty
-repo: https://github.com/username/username.github.io
+paginate: 10
+exclude: ["less","node_modules","Gruntfile.js","package.json","README.md"]
+anchorjs: true                          # if you want to customize anchor. check out line:181 of `post.html`
 
-# author settings
 
-author:
-  name: Place Holder
-  email: username@domain.com
-photo: /assets/jpg/photo.jpg
 
-# build settings
+# Gems
+# from PR#40, to support local preview for Jekyll 3.0
+gems: [jekyll-paginate]
 
-exclude:
-  - LICENSE
-  - README.md
 
-plugins:
-  - jekyll-feed
-  - jekyll-gist
-  - jekyll-paginate-v2
-  - jekyll-seo-tag
-  - jekyll-sitemap
 
-whitelist:
-  - jekyll-sitemap
 
-sass:
-  sass_dir: _sass
-  style: compressed
-  sourcemap: never
+# Markdown settings
+# replace redcarpet to kramdown,
+# although redcarpet can auto highlight code, the lack of header-id make the catalog impossible, so I switch to kramdown
+# document: http://jekyllrb.com/docs/configuration/#kramdown
+markdown: kramdown
+highlighter: rouge
+#highlighter: coderay
+kramdown:
+  input: GFM                            # use Github Flavored Markdown !important
 
-feed:
-  path: atom.xml
 
-autopages:
-  enabled: false
 
-pagination:
-  enabled: true
-  per_page: 1
-  sort_reverse: true
-  permalink: /:num/
-  title: ":title &middot; Page :num"
+# 评论系统
+# Disqus（https://disqus.com/）
+# disqus_username: qiubaiying
+
+
+##############准备搞
+# Gitalk
+#gitalk:
+#  enable: true    #是否开启Gitalk评论
+#  clientID: f2c84e7629bb1446c1a4   #生成的clientID
+#  clientSecret: ca6d6139d1e1b8c43f8b2e19492ddcac8b322d0d  #同上
+#  repo: qiubaiying.github.io    #仓库名称
+#  owner: qiubaiying    #github用户名
+#  admin: qiubaiying
+#  distractionFreeMode: true #是否启用类似FB的阴影遮罩
+#####################
+
+# 统计
+
+# Analytics settings
+# Baidu Analytics
+#######################################ba_track_id: 38b740cf9ad0c9cecb234043f940f095 
+
+# Google Analytics
+########################################ga_track_id: 'UA-113204747-2'            # Format: UA-xxxxxx-xx
+########################################ga_domain: https://ezlost.tk               # 默认的是 auto, 这里我是自定义了的域名，你如果没有自己的域名，需要改成auto
+ga_domain: auto               # 默认的是 auto, 这里我是自定义了的域名，你如果没有自己的域名，需要改成auto
+
+
+
+
+
+# Featured Tags
+featured-tags: true                     # 是否使用首页标签
+featured-condition-size: 3              # 相同标签数量大于这个数，才会出现在首页
+
+
+
+# Progressive Web Apps
+chrome-tab-theme-color: "#000000"
+service-worker: true
+
+
+
+# Friends
+friends: [
+    {
+        title: "linux中国",
+        href: "http://linux.cn"
+    },{
+        title: "linux命令行",
+        href: "http://man.linuxde.net/"
+    },{
+        title: "害虫",
+        href: "http://ezlost.com"
+    },{
+        title: "谷歌开发者",
+        href: "https://developers.google.cn/"
+    }
+]
